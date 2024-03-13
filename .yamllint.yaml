@@ -1,0 +1,8 @@
+---
+extends: default
+
+ignore: |
+  unversioned/
+rules:
+  indentation:
+    indent-sequences: consistent
