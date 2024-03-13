@@ -1,0 +1,13 @@
+---
+default: true
+
+first-heading-h1: false  # MD002
+line-length:  # MD013
+  tables: false
+blanks-around-lists: false  # MD032
+no-emphasis-as-heading: false  # MD036
+no-space-in-emphasis: false  # MD037
+fenced-code-language: false  # MD040
+first-line-h1: false  # MD041
+reference-links-images: false  # MD052
+...
