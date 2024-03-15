@@ -1,4 +1,5 @@
 This page is a placeholder for a redirect.
+{: .admonition .error}
 
 If you are viewing this content, then that redirect has not yet been
 configured. Please check back later or contact the instructor if you believe
