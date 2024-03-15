@@ -42,4 +42,7 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+minima:
+  date_format: "%-d %B %Y"
 ...
