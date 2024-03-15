@@ -1,0 +1,154 @@
+---
+---
+
+// base theme
+@import "{{ site.theme }}";
+
+
+// local modifications
+blockquote {
+  font-style: unset;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-inline-start: 40px; // reset to default (Chrome's stylesheet)
+}
+
+dd + dd {
+  margin-top: 10px; // differentiate multiple definitions
+}
+
+dd > p {
+  margin-bottom: 0px;
+  margin-top: 15px; // (loosely) mirror normal paragraph spacing
+}
+
+h5 {
+  font-size: 16px;
+}
+
+ol p:last-child, ul p:last-child {
+  margin-bottom: unset;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+ol ol ol {
+  list-style-type: lower-roman;
+}
+
+ol ol ol ol {
+  list-style-type: decimal;
+}
+
+pre, code {
+  font-size: inherit;
+}
+
+#markdown-toc {
+  background-color: $grey-color-light;
+  float: right;
+  font-size: smaller;
+  padding: 1.25ex 2em;
+}
+
+#markdown-toc::before {
+  content: "Table of Contents";
+  display: inline-block;
+  font-size: larger;
+  margin-bottom: 0.5ex;
+  text-align: center;
+  width: 100%;
+}
+
+.alert {
+  font-weight: bolder;
+}
+
+.estimate {
+  color: lighten($text-color, 50%);
+  font-size: smaller;
+  white-space: nowrap;
+}
+
+.navigation {
+  display: block;
+  overflow: hidden;
+  width: auto;
+}
+
+.navigation span {
+  display: block;
+  float: left;
+  margin: 1ex auto;
+  width: 50%;
+}
+
+.navigation .next {
+  text-align: right;
+}
+
+.points {
+  color: lighten($text-color, 50%);
+  font-size: smaller;
+}
+
+.solution {
+  display: none;
+}
+
+@media print {
+  blockquote {
+    font-size: 13px;
+  }
+
+  body {
+    font-size: 13px;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight {
+    margin-bottom: 7.5px;
+  }
+
+  .page-break {
+    page-break-after: always;
+  }
+
+  .post-header {
+    margin-bottom: 15px;
+  }
+
+  .post-title {
+    font-size: 27px;
+  }
+
+  .post-content h2 {
+    font-size: 21px;
+  }
+
+  .post-content h3 {
+    font-size: 17px
+  }
+
+  .post-content h4 {
+    font-size: 15px
+  }
+
+  table {
+    margin-bottom: 15px;
+  }
+
+  table td, table th {
+    padding: 5px 10px;
+  }
+}

@@ -1,0 +1,61 @@
+---
+layout: page
+---
+
+{{ content }}
+
+{% capture due %}{% include due.md %}{% endcapture %}
+{{ due | markdownify }}
+
+{% if jekyll.environment != "production" %}
+  {% assign lessons = site.collections | where: 'label', 'lessons' | first %}
+  {% assign path = page.path | replace: '_lessons/', '_lessons/notes/' %}
+  {% assign notes = lessons.files | where: 'path', path | first %}
+  {% if notes != nil %}
+    <h2 id="notes">Notes</h2>
+    {% assign path = path | replace: '_lessons', '' %}
+    {% capture notes %}{% include_relative {{ path }} %}{% endcapture %}
+    {{ notes | markdownify }}
+  {% endif %}
+{% endif %}
+
+<hr />
+{% assign name = page.path | split: '/' | last %}
+{% for lesson in site.data.lessons %}
+  {% if lesson == name %}
+    {% unless forloop.first %}
+      {% assign prev = iterator %}
+    {% endunless %}
+
+    {% unless forloop.last %}
+      {% assign next = site.data.lessons[forloop.index] %}
+    {% endunless %}
+  {% endif %}
+
+  {% assign iterator = lesson %}
+{% endfor %}
+
+<div class="navigation">
+{% assign lessons = site.collections | where: 'label', 'lessons' | first %}
+{% if prev %}
+  {% assign lesson = prev %}
+  {% assign path = prev | prepend: '/' | prepend: lessons.relative_directory %}
+  {% assign prev = lessons.docs | where: 'path', path | first %}
+  <span class="previous">
+    {%- capture link -%}[&laquo; {{ prev.title | default: lesson }}]({{ site.baseurl }}{{ prev.url | default: path }}){%- endcapture -%}
+    {{ link | markdownify }}
+  </span>
+{% else %}
+  <span class="previous"></span>
+{% endif %}
+
+{% if next %}
+  {% assign lesson = next %}
+  {% assign path = next | prepend: '/' | prepend: lessons.relative_directory %}
+  {% assign next = lessons.docs | where: 'path', path | first %}
+  <span class="next">
+    {%- capture link -%}[{{ next.title | default: lesson }} &raquo;]({{ site.baseurl }}{{ next.url | default: path }}){%- endcapture -%}
+    {{ link | markdownify }}
+  </span>
+{% endif %}
+</div>
