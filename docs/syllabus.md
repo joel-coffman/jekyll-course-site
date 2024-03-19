@@ -22,7 +22,6 @@ site.baseurl }}{% link schedule.md %}).
 | Office  | |
 | Phone   | |
 | Email   | |
-| Website | |
 
 ## Course Description
 
