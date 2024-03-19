@@ -7,18 +7,6 @@ layout: page
 {% capture due %}{% include due.md %}{% endcapture %}
 {{ due | markdownify }}
 
-{% if jekyll.environment != "production" %}
-  {% assign lessons = site.collections | where: 'label', 'lessons' | first %}
-  {% assign path = page.path | replace: '_lessons/', '_lessons/notes/' %}
-  {% assign notes = lessons.files | where: 'path', path | first %}
-  {% if notes != nil %}
-    <h2 id="notes">Notes</h2>
-    {% assign path = path | replace: '_lessons', '' %}
-    {% capture notes %}{% include_relative {{ path }} %}{% endcapture %}
-    {{ notes | markdownify }}
-  {% endif %}
-{% endif %}
-
 <hr />
 {% assign name = page.path | split: '/' | last %}
 {% for lesson in site.data.lessons %}
