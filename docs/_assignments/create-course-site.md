@@ -25,7 +25,7 @@ Expected duration
 : 1 hour
 
 Submission
-: [{{ site.data.course.lms }}]({{ site.baseurl }}/lms)
+: [{{ site.data.course.lms }}]({{ site.baseurl }}{% link lms.md %})
 
 ## Learning Objectives
 
@@ -79,6 +79,6 @@ Use the following steps to create a course website based on this template:
 
 Create an archive of your Git repository (you can use "Code" button when
 viewing your GitHub repository for this purpose) and submit that archive to [{{
-site.data.course.lms }}]({{ site.baseurl }}/lms).
+site.data.course.lms }}]({{ site.baseurl }}{% link lms.md %}).
 
 ---

@@ -14,7 +14,7 @@ A syllabus can take many forms. In this example, the syllabus contains
 "boilerplate" information, which is typically taken from the course catalog
 (e.g., the course description and prerequisites), and course policies set by
 the instructor. A detailed list of topics may be found on the [schedule]({{
-site.baseurl }}/schedule).
+site.baseurl }}{% link schedule.md %}).
 
 ## Instructor
 
