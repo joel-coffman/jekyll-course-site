@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Schedule Change
+title: Instructor Travel
 tags:
 - schedule
 ---
