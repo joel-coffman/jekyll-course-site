@@ -41,5 +41,4 @@ site.baseurl }}{% link schedule.md %}).
 
 Add additional sections, paragraphs, etc. as needed.
 
-<!-- references -->
 {% include references.md %}

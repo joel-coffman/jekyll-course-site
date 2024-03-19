@@ -16,5 +16,4 @@ layout: page
   {% endfor %}
 {% endfor %}
 
-<!-- references -->
 {% include references.md %}
