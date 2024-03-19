@@ -33,9 +33,9 @@ site.baseurl }}{% link schedule.md %}).
 - {{ prerequisite }}
 {%- endfor %}
 
-### Course Outcomes
+### Learning Outcomes
 
-{% include objectives.md %}
+{% include outcomes.md %}
 
 ## Policies
 

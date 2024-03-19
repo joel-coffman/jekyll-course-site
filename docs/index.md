@@ -7,6 +7,6 @@ list_title: Announcements
 
 {{ site.data.course.description | markdownify }}
 
-## Course Outcomes
+## Learning Outcomes
 
-{% include objectives.md %}
+{% include outcomes.md %}
