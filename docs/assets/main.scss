@@ -98,15 +98,6 @@ pre, code {
   text-align: right;
 }
 
-.points {
-  color: lighten($text-color, 50%);
-  font-size: smaller;
-}
-
-.solution {
-  display: none;
-}
-
 @media print {
   blockquote {
     font-size: 13px;
