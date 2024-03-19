@@ -7,7 +7,6 @@ title: Jekyll
 
 - Format text using Markdown
 - Create a website using Jekyll
-- Use themes to customize the look and feel of a Jekyll site
 - Describe the relationship between Jekyll and GitHub Pages
 
 ## Learning Activities
