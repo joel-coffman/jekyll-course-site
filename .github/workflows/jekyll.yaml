@@ -1,0 +1,45 @@
+---
+name: jekyll
+
+on:  # yamllint disable-line rule:truthy
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: docs
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+          ruby-version: 2.7  # https://pages.github.com/versions/
+          working-directory: docs
+      - name: Jekyll build
+        run: |
+          bundle exec jekyll clean
+          bundle exec jekyll build --destination \
+              ./_site/$(ruby -e "
+                      require 'yaml'
+
+                      config = YAML.load_file('_config.yaml')
+                      puts config[:baseurl]
+              ")
+      - name: archive artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: site
+          path: |
+            ./docs/_site/
+      - name: HTMLProofer
+        run: |
+          bundle exec htmlproofer _site/ \
+              --assume-extension --check-html --only-4xx \
+              --ignore-urls "/www.twitter.com/"
+...
