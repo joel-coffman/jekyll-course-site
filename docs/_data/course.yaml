@@ -1,0 +1,20 @@
+---
+number: Course Number
+title: Course Title
+description: >-  # folded style, which requires *two* newlines for newline
+  The course description (along with other metadata) is in `_data/course.yaml`.
+  Using a data file allows the information to be included on various pages,
+  such as the home page and syllabus without duplicating it. See Jekyll's [Data
+  Files](https://jekyllrb.com/docs/datafiles/) documentation for more details
+  about data files.
+
+
+  Note that some configuration, such as the course title and description, also
+  appears in `_config.yaml` due to design of the minima theme.
+prerequisites:
+- Familiarity with Git
+outcomes:
+- Create a course website that uses Jekyll
+- Publish the course website using GitHub Pages
+lms: the Learning Management System (LMS)
+...

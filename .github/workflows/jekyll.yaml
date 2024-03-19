@@ -40,6 +40,5 @@ jobs:
       - name: HTMLProofer
         run: |
           bundle exec htmlproofer _site/ \
-              --assume-extension --check-html --only-4xx \
-              --ignore-urls "/www.twitter.com/"
+              --assume-extension --check-html --only-4xx
 ...
