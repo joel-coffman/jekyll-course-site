@@ -3,18 +3,3 @@ layout: page
 ---
 
 {{ content }}
-
-<script defer type="text/javascript">
-  var url = new URL(window.location.href);
-
-  var display = 'none';
-  if (url.searchParams.has('solutions')) {
-    display = 'block';
-  }
-
-  var solutions = document.getElementsByClassName('solution');
-  for (var i = 0; i < solutions.length; i++) {
-    var solution = solutions[i];
-    solution.style.display = display;
-  }
-</script>
