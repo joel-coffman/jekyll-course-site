@@ -6,11 +6,6 @@ title: Schedule
 
 list_title: Changes
 tag: schedule
-
-# holidays:
-# - lesson: <number of lesson *preceding* the holiday>
-#   name: <name of holiday (to appear in the schedule)>
-holidays:
 ---
 
 This schedule provides an overview of the lessons and assignments throughout
@@ -45,10 +40,6 @@ assignment metadata (specifically the due "date").
       | prepend: lessons.relative_directory -%}
   {%- assign current = lessons.docs | where: 'path', path | first -%}
 | {{ forloop.index }} | [{{ current.title | default: lesson }}]({{ site.baseurl }}{{ current.url | default: path }}) | {%- for assignment in due -%}[{{ assignment.title }}]({{ site.baseurl }}{{ assignment.url }}){%- endfor -%} |
-  {%- assign holiday = page.holidays | where: 'lesson', index | first -%}
-  {%- if holiday %}
-| | *{{ holiday.name }}* | |
-  {%- endif %}
 {% endfor %}
 
 <!-- markdownlint-enable line-length table-column-count table-pipe-style -->
