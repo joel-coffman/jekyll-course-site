@@ -1,7 +1,7 @@
 ---
 layout: page
 
-redirect_to:
+redirect_to:  # TODO: Insert URL to course in LMS
 ---
 
 # Learning Management System (LMS)
