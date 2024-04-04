@@ -50,4 +50,7 @@ collections:
 
 minima:
   date_format: "%-d %B %Y"
+
+titles_from_headings:
+  enabled: false
 ...
