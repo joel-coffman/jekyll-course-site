@@ -4,6 +4,8 @@
 // base theme
 @import "{{ site.theme }}";
 
+// additional stylesheets
+@import "admonitions";
 
 // local modifications
 blockquote {
@@ -75,6 +77,16 @@ pre, code {
   font-weight: bolder;
 }
 
+.banner {
+  background: lighten($error, 40%);
+  border: 1px solid rgba($error, 0.5);
+  padding: 0.5em 0.5ex;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  z-index: 1000; // always on top
+}
+
 .estimate {
   color: lighten($text-color, 50%);
   font-size: smaller;
@@ -143,5 +155,3 @@ pre, code {
     padding: 5px 10px;
   }
 }
-
-@import "admonitions";
