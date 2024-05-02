@@ -3,6 +3,12 @@ layout: lesson
 title: GitHub Pages
 ---
 
+GitHub Pages is a static site hosting service provided by GitHub where content
+is hosted in and published from a GitHub repository. GitHub Pages supports not
+only client-side web technologies (e.g., HTML, CSS, and JavaScript) but also
+Jekyll, a site generator that transforms Markdown documents into a static
+website.
+
 ## Learning Objectives
 
 - Use GitHub to host a Git repository
