@@ -27,5 +27,5 @@ Complete the following learning activities as part of this lesson:
    *(5 minutes)*{: .estimate}
 
 [10-minute-tutorial]: https://commonmark.org/help/tutorial/
-[jekyll-tutorial]: https://jekyllrb.com/docs/step-by-step/01-setup/
+[jekyll-tutorial]: https://jekyllrb.com/docs/step-by-step/
 [jekyll-github-pages]: https://jekyllrb.com/docs/github-pages/
