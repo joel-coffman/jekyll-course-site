@@ -17,4 +17,6 @@ outcomes:
 - Create a course website that uses Jekyll
 - Publish the course website using GitHub Pages
 lms: the Learning Management System (LMS)
+term: current
+deprecated: false
 ...

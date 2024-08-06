@@ -3,6 +3,11 @@ layout: lesson
 title: Jekyll
 ---
 
+Jekyll is a site generator that converts Markdown documents, HTML templates,
+and CSS into a static website that can be hosted anywhere. Jekyll also powers
+GitHub Pages, making it easy to create and publish a website, especially for
+anyone who already uses GitHub.
+
 ## Learning Objectives
 
 - Format text using Markdown
@@ -22,5 +27,5 @@ Complete the following learning activities as part of this lesson:
    *(5 minutes)*{: .estimate}
 
 [10-minute-tutorial]: https://commonmark.org/help/tutorial/
-[jekyll-tutorial]: https://jekyllrb.com/docs/step-by-step/01-setup/
+[jekyll-tutorial]: https://jekyllrb.com/docs/step-by-step/
 [jekyll-github-pages]: https://jekyllrb.com/docs/github-pages/
