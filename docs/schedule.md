@@ -19,7 +19,11 @@ assignment metadata (specifically the due "date").
 {% assign lessons = site.collections
     | where: 'label', 'lessons' | first %}
 
-<!-- markdownlint-disable line-length table-column-count table-pipe-style -->
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable blanks-around-tables -->
+<!-- markdownlint-disable line-length -->
+<!-- markdownlint-disable table-column-count -->
+<!-- markdownlint-disable table-pipe-style -->
 
 |    | Lesson | Assignment(s) |
 | -: | :----- | :------------ |
@@ -42,4 +46,4 @@ assignment metadata (specifically the due "date").
 | {{ forloop.index }} | [{{ current.title | default: lesson }}]({{ site.baseurl }}{{ current.url | default: path }}) | {%- for assignment in due -%}[{{ assignment.title }}]({{ site.baseurl }}{{ assignment.url }}){%- endfor -%} |
 {% endfor %}
 
-<!-- markdownlint-enable line-length table-column-count table-pipe-style -->
+<!-- markdownlint-restore -->
